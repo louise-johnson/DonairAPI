@@ -20,12 +20,13 @@ var DonairSchema = new Schema({
 	size: {
 		type: String,
 		//the size must be one of the following values
-		enum: ['small', 'medium', 'large']
+		enum: ['small', 'medium', 'large'],
+		default: 'medium'
 	},
 	discountPercent: {
 		type: Number,
-		minimum: 0,
-		maximum: 100,
+		min: [0, "Minimum discount percentage is 0."],
+		max: [100, "Maximum discount percentage is 100."],
 		default: 0
 	}
 });
