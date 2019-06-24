@@ -22,6 +22,7 @@ This is a simple RESTful API for donair ordering. It has basic CRUD functionalit
    - GET /donairs/donairID
    - PUT /donairs/donairID
    - DELETE /donairs/donairID
+   - DELETE /donairs/search/donairName
    - GET /donairs/search/donairName
 
 ### Example:
