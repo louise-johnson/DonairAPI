@@ -1,6 +1,3 @@
-// write the diffrent functions here
-// list_all_donairs, create_a_donair, read_a_donair, update_a_donair, delete_a_donair 
-
 'use strict';
 
 var mongoose = require('mongoose'),
@@ -39,8 +36,7 @@ exports.update_a_donair = function(req, res) {
   });
 };
 
-
-exports.delete_a_donair = function(req, res) {
+exports.delete_a_donair_id = function(req, res) {
   Donair.remove({
     _id: req.params.donairId
   }, function(err, donair) {
@@ -50,7 +46,16 @@ exports.delete_a_donair = function(req, res) {
   });
 };
 
-//Search for donairs with same keyword
+exports.delete_a_donair_name = function(req, res) {
+  Donair.remove({
+    name: req.params.donairName
+  }, function(err, donair) {
+    if (err)
+      res.send(err);
+    res.json({ message: 'donair successfully deleted' });
+  });
+};
+
 exports.search_for_donair = function(req, res) {
   Donair.find({name: req.params.donairName}, function(err, donairs) {
     if (err)
