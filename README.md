@@ -4,7 +4,8 @@ This is a simple RESTful API for donair ordering. It has basic CRUD functionalit
 ## Required tools
 1. [MongoDB](https://www.mongodb.com/download-center)
 2. [Node JS](https://nodejs.org/en/download/)
-3. [Postman](https://www.getpostman.com)
+3. [Mongoose](https://mongoosejs.com/docs/index.html) ```npm install mongoose```
+4. [Postman](https://www.getpostman.com)
 
 ## Steps
 1. Install the required tools
